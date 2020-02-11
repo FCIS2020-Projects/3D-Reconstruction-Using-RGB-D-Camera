@@ -21,9 +21,15 @@
     <ClCompile Include="src\InputHelper.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\rigestration.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\InputHelper.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\rigestration.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

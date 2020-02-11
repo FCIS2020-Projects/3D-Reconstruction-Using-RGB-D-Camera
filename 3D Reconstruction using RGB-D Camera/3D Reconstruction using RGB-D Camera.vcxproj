@@ -161,9 +161,11 @@
   <ItemGroup>
     <ClCompile Include="src\InputHelper.cpp" />
     <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\rigestration.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\InputHelper.h" />
+    <ClInclude Include="src\rigestration.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
