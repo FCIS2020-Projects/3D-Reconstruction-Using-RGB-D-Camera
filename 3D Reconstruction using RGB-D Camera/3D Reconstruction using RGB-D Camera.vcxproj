@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <ProjectGuid>{E17EAB4F-0860-4626-8FD7-A02741E65CCD}</ProjectGuid>
+    <RootNamespace>My3DReconstructionusingRGBDCamera</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PreferredToolArchitecture>
+    </PreferredToolArchitecture>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PreferredToolArchitecture />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PreferredToolArchitecture>
+    </PreferredToolArchitecture>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PreferredToolArchitecture />
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>false</SDLCheck>
+      <ConformanceMode>false</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)Dependencies\OpenCV\include;$(SolutionDir)Dependencies\RSSDK\include;$(SolutionDir)Dependencies\RSSDK\sample\common\include;$(IncludePath);$(SolutionDir)Dependencies\PCL 1.10.0\3rdParty\VTK\include\vtk-8.2;$(SolutionDir)Dependencies\PCL 1.10.0\include\pcl-1.10;$(SolutionDir)Dependencies\PCL 1.10.0\3rdParty\Eigen\eigen3;$(SolutionDir)Dependencies\PCL 1.10.0\3rdParty\Boost\include\boost-1_72;$(SolutionDir)Dependencies\PCL 1.10.0\3rdParty\OpenNI2\Include;$(SolutionDir)Dependencies\PCL 1.10.0\3rdParty\Qhull\include;$(SolutionDir)Dependencies\PCL 1.10.0\3rdParty\FLANN\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs>Default</CompileAs>
+      <SupportJustMyCode>true</SupportJustMyCode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <AdditionalLibraryDirectories>$(SolutionDir)Dependencies\OpenCV\x64\vc15\lib;$(SolutionDir)Dependencies\RSSDK\lib\$(PlatformName);$(SolutionDir)Dependencies\RSSDK\sample\common\lib\$(PlatformName)\$(PlatformToolset);$(LibraryPath);$(SolutionDir)Dependencies\PCL 1.10.0\lib;$(SolutionDir)Dependencies\PCL 1.10.0\lib\$(Configuration);$(SolutionDir)Dependencies\PCL 1.10.0\3rdParty\Boost\lib;$(SolutionDir)Dependencies\PCL 1.10.0\3rdParty\Qhull\lib;$(SolutionDir)Dependencies\PCL 1.10.0\3rdParty\OpenNI2\Lib;$(SolutionDir)Dependencies\PCL 1.10.0\3rdParty\VTK\lib;$(SolutionDir)Dependencies\PCL 1.10.0\3rdParty\FLANN\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>pcl_surfaced.lib;pcl_keypointsd.lib;pcl_trackingd.lib;pcl_recognitiond.lib;pcl_stereod.lib;pcl_outofcored.lib;pcl_peopled.lib;libboost_system-vc142-mt-gd-x64-1_72.lib;libboost_filesystem-vc142-mt-gd-x64-1_72.lib;libboost_date_time-vc142-mt-gd-x64-1_72.lib;libboost_iostreams-vc142-mt-gd-x64-1_72.lib;libboost_serialization-vc142-mt-gd-x64-1_72.lib;libboost_regex-vc142-mt-gd-x64-1_72.lib;qhullstatic_d.lib;OpenNI2.lib;vtkChartsCore-8.2-gd.lib;vtkInfovisCore-8.2-gd.lib;vtkIOGeometry-8.2-gd.lib;vtkIOLegacy-8.2-gd.lib;vtkIOPLY-8.2-gd.lib;vtkRenderingLOD-8.2-gd.lib;vtkViewsContext2D-8.2-gd.lib;vtkViewsCore-8.2-gd.lib;vtkRenderingContextOpenGL2-8.2-gd.lib;vtkRenderingOpenGL2-8.2-gd.lib;vtkglew-8.2-gd.lib;flann_cpp_s-gd.lib;pcl_registrationd.lib;pcl_segmentationd.lib;pcl_featuresd.lib;pcl_filtersd.lib;pcl_sample_consensusd.lib;pcl_mld.lib;pcl_visualizationd.lib;pcl_searchd.lib;pcl_kdtreed.lib;pcl_iod.lib;pcl_octreed.lib;pcl_commond.lib;vtkInteractionWidgets-8.2-gd.lib;vtkFiltersModeling-8.2-gd.lib;vtkInteractionStyle-8.2-gd.lib;vtkFiltersExtraction-8.2-gd.lib;vtkFiltersStatistics-8.2-gd.lib;vtkImagingFourier-8.2-gd.lib;vtkFiltersHybrid-8.2-gd.lib;vtkImagingGeneral-8.2-gd.lib;vtkImagingSources-8.2-gd.lib;vtkImagingHybrid-8.2-gd.lib;vtkIOImage-8.2-gd.lib;vtkDICOMParser-8.2-gd.lib;vtkmetaio-8.2-gd.lib;comctl32.lib;wsock32.lib;vtkpng-8.2-gd.lib;vtktiff-8.2-gd.lib;vtkjpeg-8.2-gd.lib;vtkRenderingAnnotation-8.2-gd.lib;vtkImagingColor-8.2-gd.lib;vtkRenderingVolume-8.2-gd.lib;vtkIOXML-8.2-gd.lib;vtkIOXMLParser-8.2-gd.lib;vtkIOCore-8.2-gd.lib;vtkdoubleconversion-8.2-gd.lib;vtklz4-8.2-gd.lib;vtklzma-8.2-gd.lib;vtkexpat-8.2-gd.lib;vtkImagingCore-8.2-gd.lib;vtkRenderingContext2D-8.2-gd.lib;vtkRenderingFreeType-8.2-gd.lib;vtkfreetype-8.2-gd.lib;vtkzlib-8.2-gd.lib;vtkRenderingCore-8.2-gd.lib;vtkCommonColor-8.2-gd.lib;vtkFiltersGeometry-8.2-gd.lib;vtkFiltersSources-8.2-gd.lib;vtkFiltersGeneral-8.2-gd.lib;vtkCommonComputationalGeometry-8.2-gd.lib;vtkFiltersCore-8.2-gd.lib;vtkCommonExecutionModel-8.2-gd.lib;vtkCommonDataModel-8.2-gd.lib;vtkCommonTransforms-8.2-gd.lib;vtkCommonMisc-8.2-gd.lib;vtkCommonMath-8.2-gd.lib;vtkCommonSystem-8.2-gd.lib;vtkCommonCore-8.2-gd.lib;vtksys-8.2-gd.lib;ws2_32.lib;Psapi.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;opencv_world420d.lib;libpxc_d.lib;libpxcmd_d.lib</AdditionalDependencies>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>false</SDLCheck>
+      <ConformanceMode>false</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)Dependencies\OpenCV\include;$(SolutionDir)Dependencies\RSSDK\include;$(SolutionDir)Dependencies\RSSDK\sample\common\include;$(IncludePath);$(SolutionDir)Dependencies\PCL 1.10.0\3rdParty\VTK\include\vtk-8.2;$(SolutionDir)Dependencies\PCL 1.10.0\include\pcl-1.10;$(SolutionDir)Dependencies\PCL 1.10.0\3rdParty\Eigen\eigen3;$(SolutionDir)Dependencies\PCL 1.10.0\3rdParty\Boost\include\boost-1_72;$(SolutionDir)Dependencies\PCL 1.10.0\3rdParty\OpenNI2\Include;$(SolutionDir)Dependencies\PCL 1.10.0\3rdParty\Qhull\include;$(SolutionDir)Dependencies\PCL 1.10.0\3rdParty\FLANN\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs>Default</CompileAs>
+      <SupportJustMyCode>true</SupportJustMyCode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <AdditionalLibraryDirectories>$(SolutionDir)Dependencies\OpenCV\x64\vc15\lib;$(SolutionDir)Dependencies\RSSDK\lib\$(PlatformName);$(SolutionDir)Dependencies\RSSDK\sample\common\lib\$(PlatformName)\$(PlatformToolset);$(LibraryPath);$(SolutionDir)Dependencies\PCL 1.10.0\lib;$(SolutionDir)Dependencies\PCL 1.10.0\lib\$(Configuration);$(SolutionDir)Dependencies\PCL 1.10.0\3rdParty\Boost\lib;$(SolutionDir)Dependencies\PCL 1.10.0\3rdParty\Qhull\lib;$(SolutionDir)Dependencies\PCL 1.10.0\3rdParty\OpenNI2\Lib;$(SolutionDir)Dependencies\PCL 1.10.0\3rdParty\VTK\lib;$(SolutionDir)Dependencies\PCL 1.10.0\3rdParty\FLANN\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>pcl_surfaced.lib;pcl_keypointsd.lib;pcl_trackingd.lib;pcl_recognitiond.lib;pcl_stereod.lib;pcl_outofcored.lib;pcl_peopled.lib;libboost_system-vc142-mt-gd-x64-1_72.lib;libboost_filesystem-vc142-mt-gd-x64-1_72.lib;libboost_date_time-vc142-mt-gd-x64-1_72.lib;libboost_iostreams-vc142-mt-gd-x64-1_72.lib;libboost_serialization-vc142-mt-gd-x64-1_72.lib;libboost_regex-vc142-mt-gd-x64-1_72.lib;qhullstatic_d.lib;OpenNI2.lib;vtkChartsCore-8.2-gd.lib;vtkInfovisCore-8.2-gd.lib;vtkIOGeometry-8.2-gd.lib;vtkIOLegacy-8.2-gd.lib;vtkIOPLY-8.2-gd.lib;vtkRenderingLOD-8.2-gd.lib;vtkViewsContext2D-8.2-gd.lib;vtkViewsCore-8.2-gd.lib;vtkRenderingContextOpenGL2-8.2-gd.lib;vtkRenderingOpenGL2-8.2-gd.lib;vtkglew-8.2-gd.lib;flann_cpp_s-gd.lib;pcl_registrationd.lib;pcl_segmentationd.lib;pcl_featuresd.lib;pcl_filtersd.lib;pcl_sample_consensusd.lib;pcl_mld.lib;pcl_visualizationd.lib;pcl_searchd.lib;pcl_kdtreed.lib;pcl_iod.lib;pcl_octreed.lib;pcl_commond.lib;vtkInteractionWidgets-8.2-gd.lib;vtkFiltersModeling-8.2-gd.lib;vtkInteractionStyle-8.2-gd.lib;vtkFiltersExtraction-8.2-gd.lib;vtkFiltersStatistics-8.2-gd.lib;vtkImagingFourier-8.2-gd.lib;vtkFiltersHybrid-8.2-gd.lib;vtkImagingGeneral-8.2-gd.lib;vtkImagingSources-8.2-gd.lib;vtkImagingHybrid-8.2-gd.lib;vtkIOImage-8.2-gd.lib;vtkDICOMParser-8.2-gd.lib;vtkmetaio-8.2-gd.lib;comctl32.lib;wsock32.lib;vtkpng-8.2-gd.lib;vtktiff-8.2-gd.lib;vtkjpeg-8.2-gd.lib;vtkRenderingAnnotation-8.2-gd.lib;vtkImagingColor-8.2-gd.lib;vtkRenderingVolume-8.2-gd.lib;vtkIOXML-8.2-gd.lib;vtkIOXMLParser-8.2-gd.lib;vtkIOCore-8.2-gd.lib;vtkdoubleconversion-8.2-gd.lib;vtklz4-8.2-gd.lib;vtklzma-8.2-gd.lib;vtkexpat-8.2-gd.lib;vtkImagingCore-8.2-gd.lib;vtkRenderingContext2D-8.2-gd.lib;vtkRenderingFreeType-8.2-gd.lib;vtkfreetype-8.2-gd.lib;vtkzlib-8.2-gd.lib;vtkRenderingCore-8.2-gd.lib;vtkCommonColor-8.2-gd.lib;vtkFiltersGeometry-8.2-gd.lib;vtkFiltersSources-8.2-gd.lib;vtkFiltersGeneral-8.2-gd.lib;vtkCommonComputationalGeometry-8.2-gd.lib;vtkFiltersCore-8.2-gd.lib;vtkCommonExecutionModel-8.2-gd.lib;vtkCommonDataModel-8.2-gd.lib;vtkCommonTransforms-8.2-gd.lib;vtkCommonMisc-8.2-gd.lib;vtkCommonMath-8.2-gd.lib;vtkCommonSystem-8.2-gd.lib;vtkCommonCore-8.2-gd.lib;vtksys-8.2-gd.lib;ws2_32.lib;Psapi.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;opencv_world420d.lib;libpxc_d.lib;libpxcmd_d.lib</AdditionalDependencies>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>false</SDLCheck>
+      <ConformanceMode>false</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)Dependencies\OpenCV\include;$(SolutionDir)Dependencies\RSSDK\include;$(SolutionDir)Dependencies\RSSDK\sample\common\include;$(IncludePath);$(SolutionDir)Dependencies\PCL 1.10.0\3rdParty\VTK\include\vtk-8.2;$(SolutionDir)Dependencies\PCL 1.10.0\include\pcl-1.10;$(SolutionDir)Dependencies\PCL 1.10.0\3rdParty\Eigen\eigen3;$(SolutionDir)Dependencies\PCL 1.10.0\3rdParty\Boost\include\boost-1_72;$(SolutionDir)Dependencies\PCL 1.10.0\3rdParty\OpenNI2\Include;$(SolutionDir)Dependencies\PCL 1.10.0\3rdParty\Qhull\include;$(SolutionDir)Dependencies\PCL 1.10.0\3rdParty\FLANN\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs>Default</CompileAs>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>$(SolutionDir)Dependencies\OpenCV\x64\vc15\lib;$(SolutionDir)Dependencies\RSSDK\lib\$(PlatformName);$(SolutionDir)Dependencies\RSSDK\sample\common\lib\$(PlatformName)\$(PlatformToolset);$(LibraryPath);$(SolutionDir)Dependencies\PCL 1.10.0\lib;$(SolutionDir)Dependencies\PCL 1.10.0\lib\$(Configuration);$(SolutionDir)Dependencies\PCL 1.10.0\3rdParty\Boost\lib;$(SolutionDir)Dependencies\PCL 1.10.0\3rdParty\Qhull\lib;$(SolutionDir)Dependencies\PCL 1.10.0\3rdParty\OpenNI2\Lib;$(SolutionDir)Dependencies\PCL 1.10.0\3rdParty\VTK\lib;$(SolutionDir)Dependencies\PCL 1.10.0\3rdParty\FLANN\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>pcl_surface.lib;pcl_keypoints.lib;pcl_tracking.lib;pcl_recognition.lib;pcl_stereo.lib;pcl_outofcore.lib;pcl_people.lib;libboost_system-vc142-mt-x64-1_72.lib;libboost_filesystem-vc142-mt-x64-1_72.lib;libboost_date_time-vc142-mt-x64-1_72.lib;libboost_iostreams-vc142-mt-x64-1_72.lib;libboost_serialization-vc142-mt-x64-1_72.lib;libboost_regex-vc142-mt-x64-1_72.lib;qhullstatic.lib;OpenNI2.lib;vtkChartsCore-8.2.lib;vtkInfovisCore-8.2.lib;vtkIOGeometry-8.2.lib;vtkIOLegacy-8.2.lib;vtkIOPLY-8.2.lib;vtkRenderingLOD-8.2.lib;vtkViewsContext2D-8.2.lib;vtkViewsCore-8.2.lib;vtkRenderingContextOpenGL2-8.2.lib;vtkRenderingOpenGL2-8.2.lib;vtkglew-8.2.lib;flann_cpp_s.lib;pcl_registration.lib;pcl_segmentation.lib;pcl_features.lib;pcl_filters.lib;pcl_sample_consensus.lib;pcl_ml.lib;pcl_visualization.lib;pcl_search.lib;pcl_kdtree.lib;pcl_io.lib;pcl_octree.lib;pcl_common.lib;vtkInteractionWidgets-8.2.lib;vtkFiltersModeling-8.2.lib;vtkInteractionStyle-8.2.lib;vtkFiltersExtraction-8.2.lib;vtkFiltersStatistics-8.2.lib;vtkImagingFourier-8.2.lib;vtkFiltersHybrid-8.2.lib;vtkImagingGeneral-8.2.lib;vtkImagingSources-8.2.lib;vtkImagingHybrid-8.2.lib;vtkIOImage-8.2.lib;vtkDICOMParser-8.2.lib;vtkmetaio-8.2.lib;comctl32.lib;wsock32.lib;vtkpng-8.2.lib;vtktiff-8.2.lib;vtkjpeg-8.2.lib;vtkRenderingAnnotation-8.2.lib;vtkImagingColor-8.2.lib;vtkRenderingVolume-8.2.lib;vtkIOXML-8.2.lib;vtkIOXMLParser-8.2.lib;vtkIOCore-8.2.lib;vtkdoubleconversion-8.2.lib;vtklz4-8.2.lib;vtklzma-8.2.lib;vtkexpat-8.2.lib;vtkImagingCore-8.2.lib;vtkRenderingContext2D-8.2.lib;vtkRenderingFreeType-8.2.lib;vtkfreetype-8.2.lib;vtkzlib-8.2.lib;vtkRenderingCore-8.2.lib;vtkCommonColor-8.2.lib;vtkFiltersGeometry-8.2.lib;vtkFiltersSources-8.2.lib;vtkFiltersGeneral-8.2.lib;vtkCommonComputationalGeometry-8.2.lib;vtkFiltersCore-8.2.lib;vtkCommonExecutionModel-8.2.lib;vtkCommonDataModel-8.2.lib;vtkCommonTransforms-8.2.lib;vtkCommonMisc-8.2.lib;vtkCommonMath-8.2.lib;vtkCommonSystem-8.2.lib;vtkCommonCore-8.2.lib;vtksys-8.2.lib;ws2_32.lib;Psapi.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;opencv_world420.lib;libpxc.lib;libpxcmd.lib</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>false</SDLCheck>
+      <ConformanceMode>false</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)Dependencies\OpenCV\include;$(SolutionDir)Dependencies\RSSDK\include;$(SolutionDir)Dependencies\RSSDK\sample\common\include;$(IncludePath);$(SolutionDir)Dependencies\PCL 1.10.0\3rdParty\VTK\include\vtk-8.2;$(SolutionDir)Dependencies\PCL 1.10.0\include\pcl-1.10;$(SolutionDir)Dependencies\PCL 1.10.0\3rdParty\Eigen\eigen3;$(SolutionDir)Dependencies\PCL 1.10.0\3rdParty\Boost\include\boost-1_72;$(SolutionDir)Dependencies\PCL 1.10.0\3rdParty\OpenNI2\Include;$(SolutionDir)Dependencies\PCL 1.10.0\3rdParty\Qhull\include;$(SolutionDir)Dependencies\PCL 1.10.0\3rdParty\FLANN\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs>Default</CompileAs>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>$(SolutionDir)Dependencies\OpenCV\x64\vc15\lib;$(SolutionDir)Dependencies\RSSDK\lib\$(PlatformName);$(SolutionDir)Dependencies\RSSDK\sample\common\lib\$(PlatformName)\$(PlatformToolset);$(LibraryPath);$(SolutionDir)Dependencies\PCL 1.10.0\lib;$(SolutionDir)Dependencies\PCL 1.10.0\lib\$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>pcl_surface.lib;pcl_keypoints.lib;pcl_tracking.lib;pcl_recognition.lib;pcl_stereo.lib;pcl_outofcore.lib;pcl_people.lib;libboost_system-vc142-mt-x64-1_72.lib;libboost_filesystem-vc142-mt-x64-1_72.lib;libboost_date_time-vc142-mt-x64-1_72.lib;libboost_iostreams-vc142-mt-x64-1_72.lib;libboost_serialization-vc142-mt-x64-1_72.lib;libboost_regex-vc142-mt-x64-1_72.lib;qhullstatic.lib;OpenNI2.lib;vtkChartsCore-8.2.lib;vtkInfovisCore-8.2.lib;vtkIOGeometry-8.2.lib;vtkIOLegacy-8.2.lib;vtkIOPLY-8.2.lib;vtkRenderingLOD-8.2.lib;vtkViewsContext2D-8.2.lib;vtkViewsCore-8.2.lib;vtkRenderingContextOpenGL2-8.2.lib;vtkRenderingOpenGL2-8.2.lib;vtkglew-8.2.lib;flann_cpp_s.lib;pcl_registration.lib;pcl_segmentation.lib;pcl_features.lib;pcl_filters.lib;pcl_sample_consensus.lib;pcl_ml.lib;pcl_visualization.lib;pcl_search.lib;pcl_kdtree.lib;pcl_io.lib;pcl_octree.lib;pcl_common.lib;vtkInteractionWidgets-8.2.lib;vtkFiltersModeling-8.2.lib;vtkInteractionStyle-8.2.lib;vtkFiltersExtraction-8.2.lib;vtkFiltersStatistics-8.2.lib;vtkImagingFourier-8.2.lib;vtkFiltersHybrid-8.2.lib;vtkImagingGeneral-8.2.lib;vtkImagingSources-8.2.lib;vtkImagingHybrid-8.2.lib;vtkIOImage-8.2.lib;vtkDICOMParser-8.2.lib;vtkmetaio-8.2.lib;comctl32.lib;wsock32.lib;vtkpng-8.2.lib;vtktiff-8.2.lib;vtkjpeg-8.2.lib;vtkRenderingAnnotation-8.2.lib;vtkImagingColor-8.2.lib;vtkRenderingVolume-8.2.lib;vtkIOXML-8.2.lib;vtkIOXMLParser-8.2.lib;vtkIOCore-8.2.lib;vtkdoubleconversion-8.2.lib;vtklz4-8.2.lib;vtklzma-8.2.lib;vtkexpat-8.2.lib;vtkImagingCore-8.2.lib;vtkRenderingContext2D-8.2.lib;vtkRenderingFreeType-8.2.lib;vtkfreetype-8.2.lib;vtkzlib-8.2.lib;vtkRenderingCore-8.2.lib;vtkCommonColor-8.2.lib;vtkFiltersGeometry-8.2.lib;vtkFiltersSources-8.2.lib;vtkFiltersGeneral-8.2.lib;vtkCommonComputationalGeometry-8.2.lib;vtkFiltersCore-8.2.lib;vtkCommonExecutionModel-8.2.lib;vtkCommonDataModel-8.2.lib;vtkCommonTransforms-8.2.lib;vtkCommonMisc-8.2.lib;vtkCommonMath-8.2.lib;vtkCommonSystem-8.2.lib;vtkCommonCore-8.2.lib;vtksys-8.2.lib;ws2_32.lib;Psapi.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;opencv_world420.lib;libpxc.lib;libpxcmd.lib</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="src\InputHelper.cpp" />
+    <ClCompile Include="src\main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\InputHelper.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
